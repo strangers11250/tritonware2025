@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/StartMenu.uss?fileID=7433441132597879392&amp;guid=11ab64fef4e0dde41bdd11ee826fb41d&amp;type=3#StartMenu" />
+    <ui:Button text="Start" name="PlayButton" style="align-items: center; right: auto; bottom: auto; left: auto; width: 20%; height: 20px; -unity-text-align: lower-center; align-content: center; align-self: center;" />
+</ui:UXML>
