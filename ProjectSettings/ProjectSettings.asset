@@ -694,8 +694,5 @@ PlayerSettings:
   insecureHttpOption: 0
   androidVulkanDenyFilterList: []
   androidVulkanAllowFilterList: []
-<<<<<<< HEAD
-=======
   androidVulkanDeviceFilterListAsset: {fileID: 0}
   d3d12DeviceFilterListAsset: {fileID: 0}
->>>>>>> 101c59bd0602a109812225784fed9fefc8510251

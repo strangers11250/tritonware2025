@@ -22,14 +22,14 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             rb.linearVelocityX = speed;
-            sr.flipX = true;
+            sr.flipX = false;
         }
 
         // Move left
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             rb.linearVelocityX = -speed;
-            sr.flipX = false;
+            sr.flipX = true;
         }
 
         // Move up
