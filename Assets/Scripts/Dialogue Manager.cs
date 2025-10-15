@@ -24,7 +24,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(DialogueManager dialogue)
     {
-        //nameText.text = dialogue.nameTest;
+        nameText.text = dialogue.nameTest;
         sentences.Clear();
 
         foreach (string sentence in dialogue.sentences)
