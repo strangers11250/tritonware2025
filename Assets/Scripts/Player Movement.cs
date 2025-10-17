@@ -22,14 +22,14 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             rb.linearVelocityX = speed;
-            sr.flipX = false;
+            this.transform.localScale = new Vector3(1, 1, 1);
         }
 
         // Move left
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             rb.linearVelocityX = -speed;
-            sr.flipX = true;
+            this.transform.localScale = new Vector3(-1, 1, 1);
         }
 
         // Move up

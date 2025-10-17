@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -96,3 +96,6 @@ public class Dialogue
     [TextArea(3, 10)]
     public string[] sentences;
 }
+
+
+*/
