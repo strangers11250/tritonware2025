@@ -1,5 +1,6 @@
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class basicAttacks : MonoBehaviour
 {
@@ -7,10 +8,18 @@ public class basicAttacks : MonoBehaviour
     public CircleCollider2D attackCollider;
     public GameObject attackEffect;
     public GameObject parryEffect;
+    public int maxHP = 100;
+    private int currentHP;
+    public Slider healthBarUI;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        attackCollider.enabled = false;
+        parryCollider.enabled = false;
+        currentHP = maxHP;
+        if (healthBarUI != null)
+            healthBarUI.maxValue = maxHP;
     }
 
     // Update is called once per frame
@@ -58,5 +67,39 @@ public class basicAttacks : MonoBehaviour
     void EndParry()
     {
         parryCollider.enabled = false;
+    }
+
+    public void OnHitEnemy(GameObject enemy)
+    {
+        Debug.Log("Player hit enemy: " + enemy.name);
+        // Example: deal damage
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHP -= damage;
+        currentHP = Mathf.Clamp(currentHP, 0, maxHP);
+        UpdateHealthUI();
+
+        if (currentHP <= 0)
+            Die();
+    }
+
+    public void Heal(int amount)
+    {
+        currentHP += amount;
+        currentHP = Mathf.Clamp(currentHP, 0, maxHP);
+        UpdateHealthUI();
+    }
+
+    void UpdateHealthUI()
+    {
+        if (healthBarUI != null)
+            healthBarUI.value = currentHP;
+    }
+
+    void Die()
+    {
+        Debug.Log("Player Died!");
     }
 }
