@@ -20,6 +20,7 @@ public class basicAttacks : MonoBehaviour
         currentHP = maxHP;
         if (healthBarUI != null)
             healthBarUI.maxValue = maxHP;
+            UpdateHealthUI();
     }
 
     // Update is called once per frame
@@ -94,8 +95,7 @@ public class basicAttacks : MonoBehaviour
 
     void UpdateHealthUI()
     {
-        if (healthBarUI != null)
-            healthBarUI.value = currentHP;
+        healthBarUI.value = currentHP;
     }
 
     void Die()

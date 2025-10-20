@@ -153,6 +153,8 @@ MonoBehaviour:
   attackCollider: {fileID: 6589601755420043799}
   attackEffect: {fileID: 6373143512476193237, guid: a02945839ef1ca443b8441c33124db5a, type: 3}
   parryEffect: {fileID: 6373143512476193237, guid: a02945839ef1ca443b8441c33124db5a, type: 3}
+  maxHP: 100
+  healthBarUI: {fileID: 0}
 --- !u!61 &5020929096948949851
 BoxCollider2D:
   m_ObjectHideFlags: 0
