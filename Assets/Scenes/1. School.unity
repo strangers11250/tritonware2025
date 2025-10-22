@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 87157746}
   - component: {fileID: 87157747}
   m_Layer: 0
-  m_Name: Boundry
+  m_Name: Boundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 1229505846}
   - component: {fileID: 1229505847}
   m_Layer: 0
-  m_Name: Boundry (1)
+  m_Name: Boundary (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1365,7 +1365,7 @@ PrefabInstance:
     - target: {fileID: 1028104635615331891, guid: 9d45424fb167a7b4c9f360c4467a5583, type: 3}
       propertyPath: healthBarUI
       value: 
-      objectReference: {fileID: 122312094}
+      objectReference: {fileID: 122312096}
     - target: {fileID: 5312275220421135082, guid: 9d45424fb167a7b4c9f360c4467a5583, type: 3}
       propertyPath: m_Name
       value: Player
