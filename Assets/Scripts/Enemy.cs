@@ -63,17 +63,6 @@ public class Enemy : MonoBehaviour
     protected virtual IEnumerator UseSkill(Skill skill)
     {
         Debug.Log(enemyName + " uses skill: " + skill.skillName);
-
-        foreach (var action in skill.actions)
-        {
-            yield return new WaitForSeconds(action.delayBefore);
-
-            if (action.attackPrefab != null)
-                Instantiate(action.attackPrefab, transform.position, Quaternion.identity);
-
-            yield return new WaitForSeconds(action.duration);
-        }
-
         yield return new WaitForSeconds(skill.cooldown);
     }
 }

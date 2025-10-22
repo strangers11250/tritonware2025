@@ -105,11 +105,20 @@ public class Mira : Enemy
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collided with " + collision.gameObject.name);
+        HandleCollisionWithPlayer(collision.gameObject);
+    }
+        
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        HandleCollisionWithPlayer(collision.gameObject);
+    }
+
+    void HandleCollisionWithPlayer(GameObject obj)
+    {
         // Handle collisions if needed
-        if (collision.gameObject.CompareTag("Player"))
+        if (obj.CompareTag("Player"))
         {
-            GameObject obj = collision.gameObject;
             if (Time.time - lastContactTime < contactCooldown) return;
 
             basicAttacks playerHealth = obj.GetComponent<basicAttacks>();
@@ -119,16 +128,7 @@ public class Mira : Enemy
             lastContactTime = Time.time;
             Debug.Log(enemyName + " collided and damaged player!");
 
-            // --- Knockback effect ---
-            Rigidbody2D playerRb = player.GetComponent<Rigidbody2D>();
-            if (playerRb != null)
-            {
-                // Direction = from enemy → player
-                Vector2 knockDir = (player.transform.position - transform.position).normalized;
-
-                playerRb.AddForce(knockDir * knockbackForce, ForceMode2D.Impulse);
-            }
-
         }
     }
+
 }
