@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 [System.Serializable]
-public class Skill : ScriptableObject
+public class Skill
 {
     public string skillName;
     public float cooldown = 2f;
@@ -10,7 +10,7 @@ public class Skill : ScriptableObject
     public int priority = 1;
     public AttackAction[] actions; // the steps or attacks in this skill
 
-    [HideInInspector] public float lastUsedTime = -999f;
+    [HideInInspector] public float lastUsedTime = 1;
 
     public bool IsReady() => Time.time >= lastUsedTime + cooldown;
     public void MarkUsed() => lastUsedTime = Time.time;
@@ -24,4 +24,5 @@ public class AttackAction
     public float duration;      // e.g., active hitbox time
     public bool isParryable;
     public GameObject attackPrefab;  // projectile or hitbox prefab
+    public Vector3 offset;         // position offset from user
 }

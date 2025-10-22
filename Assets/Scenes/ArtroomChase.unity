@@ -1312,7 +1312,7 @@ Transform:
   m_GameObject: {fileID: 1523813312}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20, y: 0, z: 0}
+  m_LocalPosition: {x: -14, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1395,14 +1395,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Mira
   enemyName: Mira
   maxHP: 100
-  skillSet: []
+  skillSet:
+  - skillName: Arrows
+    cooldown: 6
+    range: 30
+    priority: 1
+    actions:
+    - actionName: arrow1
+      delayBefore: 0
+      duration: 0.5
+      isParryable: 0
+      attackPrefab: {fileID: 3606035269312488909, guid: f62679624bc21cf4386b63c70c265b81, type: 3}
+      offset: {x: 0, y: 2, z: 0}
+    - actionName: arrow2
+      delayBefore: 0
+      duration: 0.3
+      isParryable: 0
+      attackPrefab: {fileID: 3606035269312488909, guid: f62679624bc21cf4386b63c70c265b81, type: 3}
+      offset: {x: 0, y: -2, z: 0}
+    - actionName: arrow3
+      delayBefore: 0
+      duration: 0.7
+      isParryable: 1
+      attackPrefab: {fileID: 3606035269312488909, guid: f62679624bc21cf4386b63c70c265b81, type: 3}
+      offset: {x: 2, y: 0, z: 0}
+    lastUsedTime: -999
   isAlive: 1
   player: {fileID: 0}
   thinkInterval: 0.3
-  maxSpeedMultiplier: 1.8
+  maxSpeedMultiplier: 3
   minSpeedMultiplier: 0.5
   baseMoveSpeed: 10
-  idealDistance: 10
+  idealDistance: 15
   rb: {fileID: 1523813316}
   contactDamage: 30
   contactCooldown: 1
@@ -1972,6 +1996,10 @@ PrefabInstance:
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1028104635615331891, guid: 9d45424fb167a7b4c9f360c4467a5583, type: 3}
+      propertyPath: energyBarUI
+      value: 
+      objectReference: {fileID: 1234618441}
     - target: {fileID: 1028104635615331891, guid: 9d45424fb167a7b4c9f360c4467a5583, type: 3}
       propertyPath: healthBarUI
       value: 
