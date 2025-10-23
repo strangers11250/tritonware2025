@@ -1,8 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
-[System.Serializable]
-public class Skill
+[CreateAssetMenu(fileName = "NewSkill", menuName = "Game/Skill")]
+public class Skill : ScriptableObject
 {
     public string skillName;
     public float cooldown = 2f;

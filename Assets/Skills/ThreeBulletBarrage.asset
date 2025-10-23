@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9bc4f7384e7b9d4ca3ff4843f24219b, type: 3}
+  m_Name: ThreeBulletBarrage
+  m_EditorClassIdentifier: Assembly-CSharp::Skill
+  skillName: Three Bullet Barrage
+  cooldown: 3
+  range: 30
+  priority: 1
+  actions:
+  - actionName: Arrow 1
+    delayBefore: 0
+    duration: 0.3
+    isParryable: 0
+    attackPrefab: {fileID: 3606035269312488909, guid: f62679624bc21cf4386b63c70c265b81, type: 3}
+    offset: {x: 3, y: 0, z: 0}
+  - actionName: Arrow 2
+    delayBefore: 0
+    duration: 0.3
+    isParryable: 0
+    attackPrefab: {fileID: 3606035269312488909, guid: f62679624bc21cf4386b63c70c265b81, type: 3}
+    offset: {x: 0, y: 2, z: 0}
+  - actionName: Arrow 3
+    delayBefore: 0
+    duration: 1
+    isParryable: 1
+    attackPrefab: {fileID: 3606035269312488909, guid: f62679624bc21cf4386b63c70c265b81, type: 3}
+    offset: {x: -3, y: 0, z: 0}
+  lastUsedTime: 6.0765023

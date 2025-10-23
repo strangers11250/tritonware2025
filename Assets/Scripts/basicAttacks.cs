@@ -4,10 +4,9 @@ using UnityEngine.UI;
 
 public class basicAttacks : MonoBehaviour
 {
-    public CircleCollider2D parryCollider;
-    public CircleCollider2D attackCollider;
-    public GameObject attackEffect;
-    public GameObject parryEffect;
+    public GameObject attack;
+    public GameObject parry;
+    public float parryDuration = 0.5f;
     public int maxHP = 100;
     public int maxEnergy = 100;
     private int currentHP;
@@ -18,8 +17,6 @@ public class basicAttacks : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        attackCollider.enabled = false;
-        parryCollider.enabled = false;
         currentHP = maxHP;
         if (healthBarUI != null)
             healthBarUI.maxValue = maxHP;
@@ -32,7 +29,7 @@ public class basicAttacks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Z))
+        if (currentEnergy == maxEnergy)
         {
             PerformAttack();
         }
@@ -44,36 +41,15 @@ public class basicAttacks : MonoBehaviour
 
     void PerformAttack()
     {
-        // Enable the attack collider and effect
-        attackCollider.enabled = true;
-        GameObject effect = Instantiate(attackEffect, transform.position, Quaternion.identity);
-        effect.transform.parent = this.transform; // Make effect a child of the player
-        Destroy(effect, 0.5f); // Destroy effect after 0.5 seconds
-
-        // Disable after a short delay
-        Invoke("EndAttack", 0.5f); // Attack lasts for 0.3 seconds
+        GameObject attacking = Instantiate(attack, this.transform);
+        Destroy(attacking, 0.5f); // Attack effect lasts 0.5 seconds
+        currentEnergy = 0;
+        UpdateEnergyUI();
     }
-
-    void EndAttack()
-    {
-        attackCollider.enabled = false;
-    }
-
     void PerformParry()
     {
-        // Enable the parry collider
-        parryCollider.enabled = true;
-        GameObject effect = Instantiate(parryEffect, transform.position, Quaternion.identity);
-        effect.transform.parent = this.transform; // Make effect a child of the player
-        Destroy(effect, 0.5f); // Destroy effect after 0.5 seconds
-
-        // Disable after a short delay
-        Invoke("EndParry", 0.5f); // Parry lasts for 0.5 seconds
-    }
-
-    void EndParry()
-    {
-        parryCollider.enabled = false;
+        GameObject parrying = Instantiate(parry, this.transform);
+        Destroy(parrying, parryDuration); // Parry effect lasts 0.5 seconds
     }
 
     public void OnHitEnemy(GameObject enemy)
@@ -85,9 +61,10 @@ public class basicAttacks : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHP -= damage;
+        currentEnergy += damage * 2; // Regain energy on taking damage
         currentHP = Mathf.Clamp(currentHP, 0, maxHP);
         UpdateHealthUI();
-
+        UpdateEnergyUI();
         if (currentHP <= 0)
             Die();
     }

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class Mira : Enemy
+public class AnyaChase : Enemy
 {
     [Header("AI Settings")]
     public GameObject player;
@@ -101,6 +101,7 @@ public class Mira : Enemy
                 if (action.isParryable)
                 {
                     actionObject.GetComponent<SpriteRenderer>().color = Color.red; // Indicate parryable
+                    actionObject.tag = "ParryableAttack";
                 }
             }
 

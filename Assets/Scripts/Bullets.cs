@@ -23,7 +23,7 @@ public class Bullets : MonoBehaviour
             collision.gameObject.GetComponent<basicAttacks>().TakeDamage(10);
             Destroy(gameObject);
         }
-
+        
         Destroy(gameObject);
     }
 }
