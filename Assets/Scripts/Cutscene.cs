@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class Cutscene : MonoBehaviour
@@ -163,7 +164,7 @@ public class Cutscene : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         nextButton.SetActive(true);
-        eventPos = 5;
+        eventPos = 6;
     }
 
     IEnumerator EventSix()
@@ -171,7 +172,7 @@ public class Cutscene : MonoBehaviour
         fadeScreenOut.SetActive(true);
         yield return new WaitForSeconds(2);
 
-        //cue chase scene
+        SceneManager.LoadScene("ArtRoom");
     }
 
     public void NextButton()
