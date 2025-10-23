@@ -4,29 +4,26 @@ public class Bullets : MonoBehaviour
 {
     public float speed = 10f;
     public float lifetime = 5f;
-    private Vector3 direction;
-
-    public void SetDirection(Vector3 dir)
+    public Rigidbody2D rb;
+    void Start()
     {
-        direction = dir.normalized;
+        rb = GetComponent<Rigidbody2D>();
+        Destroy(gameObject, lifetime);
     }
 
     void Update()
     {
-        transform.position += direction * speed * Time.deltaTime;
+        rb.linearVelocity = transform.right * speed;
     }
 
-    void Start()
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject, lifetime);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            // Optional: deal damage here
+            collision.gameObject.GetComponent<basicAttacks>().TakeDamage(10);
             Destroy(gameObject);
         }
+
+        Destroy(gameObject);
     }
 }

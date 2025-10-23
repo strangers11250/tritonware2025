@@ -10,6 +10,10 @@ public class BackgroundTiling : MonoBehaviour
 
     void Start()
     {
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
         startPos = transform.position;
         spriteWidth = GetComponent<SpriteRenderer>().bounds.size.x - 1f;
     }

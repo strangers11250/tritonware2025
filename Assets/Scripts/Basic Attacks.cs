@@ -9,8 +9,11 @@ public class basicAttacks : MonoBehaviour
     public GameObject attackEffect;
     public GameObject parryEffect;
     public int maxHP = 100;
+    public int maxEnergy = 100;
     private int currentHP;
+    private int currentEnergy;
     public Slider healthBarUI;
+    public Slider energyBarUI;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,6 +24,9 @@ public class basicAttacks : MonoBehaviour
         if (healthBarUI != null)
             healthBarUI.maxValue = maxHP;
             UpdateHealthUI();
+        if (energyBarUI != null)
+            energyBarUI.maxValue = maxEnergy;
+            UpdateEnergyUI();
     }
 
     // Update is called once per frame
@@ -96,6 +102,11 @@ public class basicAttacks : MonoBehaviour
     void UpdateHealthUI()
     {
         healthBarUI.value = currentHP;
+    }
+
+    void UpdateEnergyUI()
+    {
+        energyBarUI.value = currentEnergy;
     }
 
     void Die()

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 // Represents a single enemy in the game
 public class Enemy : MonoBehaviour
 {
@@ -10,18 +11,19 @@ public class Enemy : MonoBehaviour
     public int maxHP = 100;
     private int currentHP;
 
+
     [Header("Skills")]
     public List<Skill> skillSet = new List<Skill>();
 
     [Header("References")]
-    private bool isAlive = true;
+    public bool isAlive = true;
 
-    void Start()
+    protected virtual void Start()
     {
         currentHP = maxHP;
     }
 
-    public void TakeDamage(int amount)
+    protected virtual void TakeDamage(int amount)
     {
         if (!isAlive) return;
 
@@ -32,7 +34,7 @@ public class Enemy : MonoBehaviour
             Die();
     }
 
-    public void Heal(int amount)
+    protected virtual void Heal(int amount)
     {
         if (!isAlive) return;
 
@@ -40,7 +42,7 @@ public class Enemy : MonoBehaviour
         Debug.Log(enemyName + " healed to " + currentHP + "/" + maxHP);
     }
 
-    void Die()
+    protected virtual void Die()
     {
         isAlive = false;
         Debug.Log(enemyName + " has died!");
@@ -49,7 +51,7 @@ public class Enemy : MonoBehaviour
     }
 
     // --- SKILL SYSTEM ---
-    public void UseRandomSkill()
+    protected virtual void UseRandomSkill()
     {
         if (skillSet.Count == 0) return;
 
@@ -58,20 +60,9 @@ public class Enemy : MonoBehaviour
         StartCoroutine(UseSkill(chosenSkill));
     }
 
-    IEnumerator UseSkill(Skill skill)
+    protected virtual IEnumerator UseSkill(Skill skill)
     {
         Debug.Log(enemyName + " uses skill: " + skill.skillName);
-
-        foreach (var action in skill.actions)
-        {
-            yield return new WaitForSeconds(action.delayBefore);
-
-            if (action.attackPrefab != null)
-                Instantiate(action.attackPrefab, transform.position, Quaternion.identity);
-
-            yield return new WaitForSeconds(action.duration);
-        }
-
         yield return new WaitForSeconds(skill.cooldown);
     }
 }
