@@ -150,7 +150,6 @@ public class Cutscene : MonoBehaviour
         fadeScreenOut.SetActive(false);
         fadeScreenIn.SetActive(true);
         fadeScreenIn.SetActive(false);
-        yield return new WaitForSeconds(4);
         charSoleneMonster.SetActive(true);
         textBox.SetActive(true);
         charName.GetComponent<TMPro.TMP_Text>().text = "Solene(???)";
