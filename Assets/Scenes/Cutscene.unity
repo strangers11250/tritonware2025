@@ -397,7 +397,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.17375, y: 0.56184834}
   m_AnchorMax: {x: 0.17375, y: 0.56184834}
-  m_AnchoredPosition: {x: -1.0777283, y: 6.2743225}
+  m_AnchoredPosition: {x: -1.0776978, y: 6.2743225}
   m_SizeDelta: {x: 145.3343, y: 226.4386}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &366998156
@@ -468,6 +468,7 @@ GameObject:
   - component: {fileID: 495527467}
   - component: {fileID: 495527469}
   - component: {fileID: 495527468}
+  - component: {fileID: 495527470}
   m_Layer: 5
   m_Name: SpeakText
   m_TagString: Untagged
@@ -514,7 +515,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Oooo lala sample text.
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -593,6 +594,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495527466}
   m_CullTransparentMesh: 1
+--- !u!114 &495527470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495527466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6ab2d2310516440aeb2677fc01aaf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TextCreator
+  transferText: 
+  internalCount: 22
 --- !u!1 &1101137391
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,7 +898,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Cutscene
   fadeScreenIn: {fileID: 1492870024}
   charRen: {fileID: 366998154}
-  textBox: {fileID: 1994035514}
+  textBox: {fileID: 495527466}
+  textToSpeak: Oooo lala sample text.
+  currentTextLength: 22
+  textLength: 22
+  mainTextObject: {fileID: 1994035514}
 --- !u!4 &1503998420
 Transform:
   m_ObjectHideFlags: 0
