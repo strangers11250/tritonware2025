@@ -23,6 +23,7 @@ public class Cutscene : MonoBehaviour
 
     void Start()
     {
+        fadeScreenOut.SetActive(false);
         StartCoroutine(EventStarter());
     }
 
