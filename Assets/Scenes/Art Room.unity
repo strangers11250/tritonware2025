@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 13204167}
   - component: {fileID: 13204166}
   m_Layer: 0
-  m_Name: Boundry (1)
+  m_Name: Boundary (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 87157746}
   - component: {fileID: 87157747}
   m_Layer: 0
-  m_Name: Boundry
+  m_Name: Boundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1030,7 +1030,7 @@ GameObject:
   - component: {fileID: 1229505846}
   - component: {fileID: 1229505847}
   m_Layer: 0
-  m_Name: Boundry (1)
+  m_Name: Boundary (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1261,7 +1261,7 @@ GameObject:
   - component: {fileID: 1457087153}
   - component: {fileID: 1457087152}
   m_Layer: 0
-  m_Name: Boundry
+  m_Name: Boundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1754,9 +1754,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 708ce65dda0b3824ebd8b819e76b0064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FullscreenToggle
-  windowedWidth: 1280
-  windowedHeight: 720
-  targetFullscreenMode: 0
 --- !u!114 &1588220002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1771,7 +1768,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   player: {fileID: 1121196224}
   offset: {x: 0, y: 0, z: 0}
-  xBounds: {x: 0, y: 0}
   yBounds: {x: -1, y: 1.15}
   smoothSpeed: 0.125
 --- !u!1 &1628349425
@@ -2021,8 +2017,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 140, y: 100}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 116.00989, y: 103.71445}
+  m_SizeDelta: {x: 147.9803, y: 107.4289}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1910695960
 MonoBehaviour:
@@ -2044,7 +2040,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 5636085655329466925, guid: bbe770ebb53d3447186b059aa251b346, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
