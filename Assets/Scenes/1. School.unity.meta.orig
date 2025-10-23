@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scenes/1. School.unity.meta.orig
 guid: 85a864479c10920489e4771140626948
+=======
+guid: a3469cc8bbff5194e9a56182f36e3004
+>>>>>>> 235f2ac2a3a5050d72bb340266059cff2a4ad151:Assets/Scenes/Corridor1InteractiveRoom.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

@@ -1124,10 +1124,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+<<<<<<< HEAD
 <<<<<<<< HEAD:Assets/Scenes/ArtroomChase.unity
 --- !u!1 &1234618439
 ========
 --- !u!1 &1240360265
+=======
+<<<<<<<< HEAD:Assets/Scenes/1. School.unity
+--- !u!1 &1240360265
+========
+--- !u!1 &1234618439
+>>>>>>>> f5bbc55927665ce637354f2bc9687b19570cbd0d:Assets/Scenes/ArtroomChase.unity
+>>>>>>> 235f2ac2a3a5050d72bb340266059cff2a4ad151
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1135,15 +1143,29 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:Assets/Scenes/1. School.unity
+>>>>>>> 235f2ac2a3a5050d72bb340266059cff2a4ad151
   - component: {fileID: 1240360267}
   - component: {fileID: 1240360266}
   m_Layer: 0
   m_Name: GameManager
+<<<<<<< HEAD
+=======
+========
+  - component: {fileID: 1234618440}
+  - component: {fileID: 1234618441}
+  m_Layer: 5
+  m_Name: EnergyBar
+>>>>>>>> f5bbc55927665ce637354f2bc9687b19570cbd0d:Assets/Scenes/ArtroomChase.unity
+>>>>>>> 235f2ac2a3a5050d72bb340266059cff2a4ad151
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!114 &1240360266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1189,6 +1211,11 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+=======
+<<<<<<<< HEAD:Assets/Scenes/1. School.unity
+--- !u!114 &1240360266
+========
+>>>>>>> 235f2ac2a3a5050d72bb340266059cff2a4ad151
 --- !u!224 &1234618440
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1211,11 +1238,27 @@ RectTransform:
   m_SizeDelta: {x: 150, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1234618441
+<<<<<<< HEAD
+=======
+>>>>>>>> f5bbc55927665ce637354f2bc9687b19570cbd0d:Assets/Scenes/ArtroomChase.unity
+>>>>>>> 235f2ac2a3a5050d72bb340266059cff2a4ad151
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:Assets/Scenes/1. School.unity
+  m_GameObject: {fileID: 1240360265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfdf39b695aa44945a19085f941f7f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+--- !u!4 &1240360267
+========
+>>>>>>> 235f2ac2a3a5050d72bb340266059cff2a4ad151
   m_GameObject: {fileID: 1234618439}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1316,11 +1359,29 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1457087151
+<<<<<<< HEAD
+=======
+>>>>>>>> f5bbc55927665ce637354f2bc9687b19570cbd0d:Assets/Scenes/ArtroomChase.unity
+>>>>>>> 235f2ac2a3a5050d72bb340266059cff2a4ad151
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:Assets/Scenes/1. School.unity
+  m_GameObject: {fileID: 1240360265}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 185.29323, y: 197.91583, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+========
+>>>>>>> 235f2ac2a3a5050d72bb340266059cff2a4ad151
   m_GameObject: {fileID: 1457087150}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -1478,7 +1539,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510983296}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!1 &1523813312 stripped
+=======
+>>>>>>>> f5bbc55927665ce637354f2bc9687b19570cbd0d:Assets/Scenes/ArtroomChase.unity
+--- !u!1 &1523813312
+>>>>>>> 235f2ac2a3a5050d72bb340266059cff2a4ad151
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8705299566143598865, guid: 35f40d62be6bc194c871c4ca21d1c14d, type: 3}
   m_PrefabInstance: {fileID: 1278383243003465566}
