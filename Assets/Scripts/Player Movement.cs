@@ -4,7 +4,7 @@ public class Movement : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float speed;
-    public SpriteRenderer sr;
+    public SpriteRenderer spriteRenderer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,15 +22,22 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             rb.linearVelocityX = speed;
-            this.transform.localScale = new Vector3(1, 1, 1);
+            // this.transform.localScale = new Vector3(1, 1, 1);
         }
 
         // Move left
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             rb.linearVelocityX = -speed;
-            this.transform.localScale = new Vector3(-1, 1, 1);
+            // this.transform.localScale = new Vector3(-1, 1, 1);
         }
+
+        float moveX = Input.GetAxisRaw("Horizontal");
+
+        if (moveX < 0)
+            spriteRenderer.flipX = true;
+        else if (moveX > 0)
+            spriteRenderer.flipX = false;
 
         // Move up
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
