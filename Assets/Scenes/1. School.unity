@@ -669,6 +669,50 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1240360265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1240360267}
+  - component: {fileID: 1240360266}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1240360266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240360265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfdf39b695aa44945a19085f941f7f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+--- !u!4 &1240360267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240360265}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 185.29323, y: 197.91583, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1523813312
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,7 +983,6 @@ GameObject:
   - component: {fileID: 1588219998}
   - component: {fileID: 1588219997}
   - component: {fileID: 1588220000}
-  - component: {fileID: 1588220001}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1036,21 +1079,6 @@ MonoBehaviour:
   player: {fileID: 1121196224}
   offset: {x: 0, y: 0, z: 0}
   smoothSpeed: 0.125
---- !u!114 &1588220001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1588219996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 708ce65dda0b3824ebd8b819e76b0064, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FullscreenToggle
-  windowedWidth: 1280
-  windowedHeight: 720
-  targetFullscreenMode: 0
 --- !u!1 &1628349425
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,3 +1463,4 @@ SceneRoots:
   - {fileID: 281349298}
   - {fileID: 1671444448}
   - {fileID: 975565680}
+  - {fileID: 1240360267}
