@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,12 +84,12 @@ SpriteRenderer:
   m_SortingLayerID: 1197993469
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3658312014315819195, guid: 3546bc1e539f1aa46997884d08c3b81f, type: 3}
+  m_Sprite: {fileID: 3116018741149400510, guid: 976c21a03c82ec04f860f47bbd01c310, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.14, y: 5.18}
+  m_Size: {x: 2.73, y: 6.61}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Movement
   rb: {fileID: 4374892811198269521}
   speed: 10
-  animator: {fileID: 6834912387862211632}
+  spriteRenderer: {fileID: 2535919420996449105}
 --- !u!114 &1028104635615331891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,8 +194,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 4.72}
-    newSize: {x: 3.14, y: 5.18}
+    oldSize: {x: 2.73, y: 6.61}
+    newSize: {x: 2.73, y: 6.61}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0

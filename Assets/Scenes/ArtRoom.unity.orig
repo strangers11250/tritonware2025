@@ -502,6 +502,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1628349426}
   - {fileID: 57832080}
   m_Father: {fileID: 1533207569}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -592,7 +593,6 @@ Transform:
   m_Children:
   - {fileID: 1833494532}
   - {fileID: 853175252}
-  - {fileID: 1877913280}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &374949298
@@ -2326,9 +2326,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 28541742289718162, guid: 35f40d62be6bc194c871c4ca21d1c14d, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1073236783}
+    - target: {fileID: 28541742289718162, guid: 35f40d62be6bc194c871c4ca21d1c14d, type: 3}
+      propertyPath: healthBarUI
+      value: 
+      objectReference: {fileID: 930129995}
     - target: {fileID: 6002856030524304009, guid: 35f40d62be6bc194c871c4ca21d1c14d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14
@@ -2386,10 +2390,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 995659417507474279, guid: 9d45424fb167a7b4c9f360c4467a5583, type: 3}
-      propertyPath: spriteRenderer
-      value: 
-      objectReference: {fileID: 5845417229935975076}
     - target: {fileID: 1028104635615331891, guid: 9d45424fb167a7b4c9f360c4467a5583, type: 3}
       propertyPath: energyBarUI
       value: 
@@ -2399,33 +2399,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 122312096}
     - target: {fileID: 2535919420996449105, guid: 9d45424fb167a7b4c9f360c4467a5583, type: 3}
-      propertyPath: m_Size.x
-      value: 2.73
-      objectReference: {fileID: 0}
-    - target: {fileID: 2535919420996449105, guid: 9d45424fb167a7b4c9f360c4467a5583, type: 3}
-      propertyPath: m_Size.y
-      value: 6.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 2535919420996449105, guid: 9d45424fb167a7b4c9f360c4467a5583, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 3116018741149400510, guid: 976c21a03c82ec04f860f47bbd01c310, type: 3}
-    - target: {fileID: 5020929096948949851, guid: 9d45424fb167a7b4c9f360c4467a5583, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 2.73
-      objectReference: {fileID: 0}
-    - target: {fileID: 5020929096948949851, guid: 9d45424fb167a7b4c9f360c4467a5583, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 6.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 5020929096948949851, guid: 9d45424fb167a7b4c9f360c4467a5583, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.73
-      objectReference: {fileID: 0}
-    - target: {fileID: 5020929096948949851, guid: 9d45424fb167a7b4c9f360c4467a5583, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 6.61
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3116018741149400510, guid: eda8317b85ff09c418c5b34905aab2a3, type: 3}
     - target: {fileID: 5312275220421135082, guid: 9d45424fb167a7b4c9f360c4467a5583, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2487,11 +2463,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d45424fb167a7b4c9f360c4467a5583, type: 3}
---- !u!212 &5845417229935975076 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 2535919420996449105, guid: 9d45424fb167a7b4c9f360c4467a5583, type: 3}
-  m_PrefabInstance: {fileID: 5845417229935975075}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
